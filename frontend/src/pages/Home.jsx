@@ -14,6 +14,9 @@ const Home = () => {
         
         if(response.ok){
             dispatch({type:'SHOW_WORKOUTS',payload:json})
+          }else{
+            throw new Error('Network response was not ok');
+
           }
         }
         fetchWorkouts()
